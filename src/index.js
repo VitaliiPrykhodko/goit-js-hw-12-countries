@@ -1,13 +1,13 @@
 import './sass/main.scss';
 import classCountries from "./js/fetchCountries.js";
 import debounce from 'lodash/debounce'
-import templateOne from './template/templateOne.hbs'
+import templatePage from './template/templateOne.hbs'
 import template from './template/template.hbs'
 import Notiflix from "notiflix"
 
 const box = document.querySelector('.container')
 const input = document.getElementById('input')
-input.addEventListener('input', debounce(onSearch, 500))
+input.addEventListener('input', debounce(onSearch, 1000))
 
 const newFetchCountries = new classCountries()
 
@@ -26,7 +26,7 @@ function onSearch(evt) {
                 })
         } if (data.length === 1) {
             data.map((elem) => {
-                const markupCap = templateOne({elem})
+                const markupCap = templatePage({elem})
             box.insertAdjacentHTML('beforeend', markupCap)
             })
         }  if (data.length > 10) {

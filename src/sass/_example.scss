@@ -1,0 +1,48 @@
+body {
+  font-family: Montserrat, sans-serif;
+  background-image: url(../image/Countries_map.jpg);
+  padding: 15px;
+}
+
+.countries-list {
+  background-color: rgba(6, 164, 238, 0.7);
+  color: rgb(5, 30, 63);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input-box {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#input {
+  width: 300px;
+  height: 30px;
+  border-color: rgb(37, 185, 8);
+  border-radius: 10px;
+  background-color: rgb(191, 224, 240);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(105, 219, 248);
+  }
+}
+
+.title {
+  text-align: center;
+  color: rgb(228, 207, 17);
+}
+
+.country-box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.list {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 260px;
+  color: rgb(245, 70, 21);
+}
