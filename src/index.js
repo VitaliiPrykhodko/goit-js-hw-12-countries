@@ -20,7 +20,7 @@ function onSearch(evt) {
     newFetchCountries.fetchCountries()
         .then(data => {
             if (data === undefined) {
-            return
+         return
         }
         if (data.length >= 2 && data.length <= 10) {
             data.forEach((elem) => {
