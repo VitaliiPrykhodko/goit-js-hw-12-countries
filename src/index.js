@@ -16,9 +16,12 @@ function onSearch(evt) {
     evt.preventDefault()
     box.innerHTML = ""
     
-    newFetchCountries.query = evt.target.value
+    newFetchCountries.query = evt.target.value.trim()
     newFetchCountries.fetchCountries()
         .then(data => {
+            if (data === undefined) {
+            return
+        }
         if (data.length >= 2 && data.length <= 10) {
             data.forEach((elem) => {
                    const markup = template({elem});
@@ -34,6 +37,5 @@ function onSearch(evt) {
         }
             
         }).catch(error => console.log(error))
-        .finally(evt.target.value = "")
-}
+       }
 
