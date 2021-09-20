@@ -3,10 +3,9 @@ import Notiflix from "notiflix"
 export default class classCountries {
     constructor() {
         this.searchQuery = ""
-        this.endPoint = "name/"
     }
     fetchCountries() {
-const url = `https://restcountries.eu/rest/v2/${this.endPoint}${this.searchQuery}`
+const url = `https://restcountries.eu/rest/v2/name/${this.searchQuery}`
 return fetch(url)
     .then(response => {
         if (response.status === 200) {
